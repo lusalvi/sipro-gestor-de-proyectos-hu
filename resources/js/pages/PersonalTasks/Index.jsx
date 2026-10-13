@@ -105,7 +105,7 @@ function getPriorityStyle(priority) {
     };
 }
 
-// ─── PrioritySelect (patrón TAHU) ────────────────────────────────
+// ─── PrioritySelect (patrón SiPro) ────────────────────────────────
 
 function PrioritySelect({ value, onChange, priorities }) {
     const combobox = useCombobox({ onDropdownClose: () => combobox.resetSelectedOption() });
