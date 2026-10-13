@@ -158,7 +158,7 @@ class TasksSeeder extends Seeder
 
         for ($i = 0; $i < $count; $i++) {
             $startDays = random_int(-10, 10);
-            $duration  = random_int(3, 14);
+            $duration = random_int(3, 14);
 
             $task = $this->createTask($taskGroup, $project, $admin, $users, $priorities, $number++, [
                 'name' => fake()->sentence(random_int(4, 8)),
@@ -198,7 +198,7 @@ class TasksSeeder extends Seeder
 
         return $taskGroup->tasks()->create(array_merge([
             'project_id' => $project->id,
-            'created_by_user_id'  => $admin->id,
+            'created_by_user_id' => $admin->id,
             'assigned_to_user_id' => $assignee?->id,
             'assigned_at' => $assignee ? now() : null,
             'number' => $number,
